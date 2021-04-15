@@ -4,6 +4,8 @@
     <script type="text/brightscript" uri="GridScreen.brs" />
     <interface>
         <field id="content" type="node" alias="RowList.content"/>
+        <field id="rowItemSelected" type="intarray" alias="RowList.rowItemSelected" alwaysNotify="true" />
+        <field id="jumpToRowItem" type="intarray" alias="RowList.jumpToRowItem"/>
     </interface>
     <children>
     

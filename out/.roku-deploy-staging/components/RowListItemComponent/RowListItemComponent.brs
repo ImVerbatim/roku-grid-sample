@@ -2,7 +2,7 @@ sub init()
     m.durationLabel = m.top.FindNode("durationLabel")
     m.poster = m.top.FindNode("poster")
 end sub
-
+'test
 sub OnContentSet()
     print "OnContentSet()"
     content = m.top.itemContent

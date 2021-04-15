@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "BrightScript Debug: Launch",
             "stopOnEntry": false,
-            "host": "172.17.133.227",
+            "host": "${promptForHost}",
             "password": "8620",
             "rootDir": "${workspaceFolder}",
             "enableDebuggerAutoRecovery": false,
