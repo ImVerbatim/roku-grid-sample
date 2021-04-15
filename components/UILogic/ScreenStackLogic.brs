@@ -15,16 +15,16 @@ sub ShowScreen(node as Object)
 end sub
 
 sub CloseScreen(node as Object) 
-    if node <> invalid
+
+    if node = invalid OR (m.screenStack.Peek() <> invalid AND m.screenStack.Peek().IsSameNode(node))
         last = m.screenStack.Pop()
         last.visible = false
         m.top.RemoveChild(node)
-
-        current = m.screenStack.Peek()
-        if current <> invalid 
-            current.visible = true
-            current.SetFocus(true)
+         
+        prev = m.screenStack.Peek()
+        if prev <> invalid 
+            prev.visible = true 
+            prev.SetFocus(true)
         end if
-    end if
-
+    end if 
 end sub

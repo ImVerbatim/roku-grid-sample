@@ -12,8 +12,10 @@ sub OnButtonSelected(event)
     content = details.content
     buttonIndex = event.getData()
     selectedItem = details.itemFocused
+    videoContent = content.GetChild(selectedItem)
+
     if buttonIndex = 0 
-        print "PLAY MEEEEE"
+        showVideoPlayerScreen(videoContent)
     end if
 end sub
 

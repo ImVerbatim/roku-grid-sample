@@ -7,8 +7,9 @@ sub init()
     m.poster = m.top.FindNode("poster")
     m.description = m.top.FindNode("descriptionLabel")
     m.timeLabel = m.top.FindNode("timeLabel")
-    m.titleLabel = m.top.FindNode("timeLabel")
+    m.titleLabel = m.top.FindNode("titleLabel")
     m.releaseLabel = m.top.FindNode("releaseLabel")
+    m.videoUrl = m.top.FindNode("videoUrlLabel")
 
     result = [] 
     for each button in ["Play"]
@@ -30,6 +31,7 @@ sub SetDetailsContent(content as Object)
     m.timeLabel.text = GetTime(content.length)
     m.titleLabel.text = content.title
     m.releaseLabel.text = content.releaseDate
+    m.videoUrl.text = content.videoUrl
 end sub
 
 sub OnJumpToItem() 

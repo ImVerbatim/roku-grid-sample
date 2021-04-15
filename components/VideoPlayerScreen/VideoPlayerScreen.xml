@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<component name="VideoPlayerScreen" extends="Group">
+    <script type="text/brightscript" uri="VideoPlayerScreen.brs" />
+    <interface>
+        <field id="content" type="node" alwaysNotify="true"/>
+        <field id="state" type="string" alwaysNotify="true"/>
+    </interface>
+    <children>
+        <Video
+            id="VideoPlayer"
+            width="1280"
+            height="720"
+            translation="[0,0]">
+        </Video>
+    </children>
+    
+</component>

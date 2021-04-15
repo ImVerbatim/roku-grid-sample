@@ -52,7 +52,14 @@ function GetItemData(video as Object) as Object
     item.id = video.id
 
     if video.content <> invalid
-        item.length = video.content.duration
+        videoContent = video.content
+        item.length = videoContent.duration
+        if videoContent.videos <> invalid AND videoContent.videos[0] <> invalid
+            videos = video.content.videos
+            item.videoUrl = videos[0].url
+            item.videoType = videos[0].videoType
+        end if
+
     end if
 
     return item
